@@ -3,7 +3,7 @@ function nameMenuItem(food) {
 }
 
 function createMenuItem(specific, cost, general){
-  var menuItem = {
+  return {
     name: `${specific}`,
     price: `${cost}`,
     type: `${general}`,
@@ -21,7 +21,18 @@ function addIngredients(newItem, ingredients){
 
 function formatPrice(initialPrice){
   return `$${initialPrice}`
+}
 
+function decreasePrice(decreasedPrice){
+return decreasedPrice = decreasedPrice - (decreasedPrice * .1)
+}
+
+function createRecipe(name, fixins, meal){
+  return {
+    title: name,
+    ingredients: fixins,
+    type: meal,
+  }
 }
 
 module.exports = {
@@ -29,6 +40,6 @@ module.exports = {
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
-  // createRecipe
+  decreasePrice,
+  createRecipe
 }
