@@ -10,8 +10,6 @@ function createMenuItem(specific, cost, general){
   }
   return menuItem;
 }
-//This function should be able to add ingredients to an empty array.
-//It looks like it takes a string and a parameter
 
 function addIngredients(newItem, ingredients){
   if (ingredients.includes(newItem)){
@@ -21,11 +19,16 @@ function addIngredients(newItem, ingredients){
   }
 }
 
+function formatPrice(initialPrice){
+  return `$${initialPrice}`
+
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
