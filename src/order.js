@@ -22,9 +22,20 @@ function listItems(array){
     }
   }
 
+  function searchOrder(list, order) {
+    for (var i = 0; i < list.length; i++){
+      if (order === "burger" || order === "blt sandwich"){
+        return true;
+      } else {
+        return false;
+      }
+   }
+}
+
+
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
