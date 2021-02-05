@@ -16,9 +16,15 @@ for (var i = 0; i <= delOrder.length; i++){
  }
 }
 
+function listItems(array){
+  for (var i = 0; i <= array.length; i++){
+    return array[0].item + ", " + array[1].item + ", " + array[2].item;
+    }
+  }
+
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
