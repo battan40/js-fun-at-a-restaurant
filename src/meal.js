@@ -23,8 +23,8 @@ function formatPrice(initialPrice){
   return `$${initialPrice}`
 }
 
-function decreasePrice(decreasedPrice){
-return decreasedPrice = decreasedPrice - (decreasedPrice * .1)
+function decreasePrice(diffPrice){
+return diffPrice = diffPrice - (diffPrice * .1)
 }
 
 function createRecipe(name, fixins, meal){
