@@ -1,5 +1,9 @@
 class Chef {
-  constructor() {
+  constructor(call, place) {
+    this.name = call;
+    this.restaurant = place;
+  }
+  greetCustomer(){
     
   }
 }
