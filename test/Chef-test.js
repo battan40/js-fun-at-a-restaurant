@@ -48,7 +48,7 @@ describe("Chef (class)", function() {
     assert.equal(scott.greetCustomer("Pam"), "Hello, Pam!");
   });
 
-  it.skip('should greet a customer differently if it is morning', function () {
+  it('should greet a customer differently if it is morning', function () {
     var casey = new Chef("Casey");
 
     assert.equal(casey.greetCustomer("Scott"), "Hello, Scott!");
