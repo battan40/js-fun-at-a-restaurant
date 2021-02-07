@@ -24,7 +24,7 @@ function listItems(array){
 
   function searchOrder(list, order) {
     for (var i = 0; i < list.length; i++){
-      if (order === "burger" || order === "blt sandwich"){
+    if (list[0].item === order || list[1].item === order){
         return true;
       } else {
         return false;

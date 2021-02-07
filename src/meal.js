@@ -2,11 +2,11 @@ function nameMenuItem(food) {
   return `Delicious ${food}`
 }
 
-function createMenuItem(specific, cost, general){
+function createMenuItem(name, cost, type){
   return {
-    name: `${specific}`,
+    name: `${name}`,
     price: `${cost}`,
-    type: `${general}`,
+    type: `${type}`,
   }
   return menuItem;
 }
