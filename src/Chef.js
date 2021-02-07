@@ -11,15 +11,11 @@ class Chef {
   }
  }
  checkForFood(foodItem){
-   if (foodItem.name === "Quiche" || foodItem.name === "Kouign Amann"){
-     return `Sorry, we aren't serving ${foodItem.name} today.`
-   }
-    if (foodItem === foodItem) {
-     return  `Yes, we're serving ${foodItem.name} today!`;
-   }
-
-   }
-
+   if (this.restaurant.menus[foodItem.type].includes(foodItem)){
+     return  `Yes, we're serving ${foodItem.name} today!`
+  } else {
+    return `Sorry, we aren't serving ${foodItem.name} today.`
+  }
+ }
 }
-
 module.exports = Chef;
