@@ -4,7 +4,7 @@ class Chef {
     this.restaurant = place;
   }
   greetCustomer(name, condition){
-    if (condition === true){
+    if (condition){
       return `Good morning, ${name}!`
     } else {
     return  `Hello, ${name}!`

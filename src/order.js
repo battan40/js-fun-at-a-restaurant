@@ -2,34 +2,38 @@ function takeOrder(order, delivery){
   if (delivery.length <= 2){
   delivery.push(order)
 } else {
-  return order;
+  order;
  }
 }
 
 function refundOrder(numOrder, delOrder){
-for (var i = 0; i <= delOrder.length; i++){
-  if (numOrder === 1){
-    return delOrder.shift(numOrder);
-  } else if (numOrder === 2) {
-    return delOrder.splice(1, 1);
+for (var i = 0; i < delOrder.length; i++){
+  if (numOrder === delOrder[i].orderNumber){
+    delOrder.splice(i, 1)
   }
  }
 }
 
 function listItems(array){
-  for (var i = 0; i <= array.length; i++){
-    return array[0].item + ", " + array[1].item + ", " + array[2].item;
-    }
+  var newItems = '';
+  for (var i = 0; i < array.length; i++){
+    if (i !== array.length - 1){
+    newItems = newItems + array[i].item + ', '
+  } else {
+    newItems = newItems + array[i].item
   }
+ }
+ return newItems;
+}
 
   function searchOrder(list, order) {
+    var onMenu = false;
     for (var i = 0; i < list.length; i++){
-    if (list[0].item === order || list[1].item === order){
-        return true;
-      } else {
-        return false;
+    if (list[i].item === order) {
+      onMenu = true;
       }
    }
+   return onMenu;
 }
 
 

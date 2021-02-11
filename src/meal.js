@@ -4,11 +4,10 @@ function nameMenuItem(food) {
 
 function createMenuItem(name, cost, type){
   return {
-    name: `${name}`,
-    price: `${cost}`,
-    type: `${type}`,
+    name: name,
+    price: cost,
+    type: type,
   }
-  return menuItem;
 }
 
 function addIngredients(newItem, ingredients){
